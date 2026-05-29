@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="te">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Connect Bhadradri</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+header{
+background:#0066cc;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.tagline{
+font-size:18px;
+}
+
+.search{
+padding:15px;
+text-align:center;
+}
+
+.search input{
+width:90%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+font-weight:bold;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+</style>
 </head>
+
 <body>
+
+<header>
 <h1>Connect Bhadradri</h1>
-<p>మీ చేతిలో మీ జిల్లా</p>
+<p class="tagline">మీ చేతిలో మీ జిల్లా</p>
+</header>
+
+<div class="search">
+<input type="text" placeholder="సేవలు, వ్యాపారాలు, ఉద్యోగాలు వెతకండి...">
+</div>
+
+<div class="grid">
+<div class="card">📰 వార్తలు</div>
+<div class="card">💼 ఉద్యోగాలు</div>
+<div class="card">🏥 ఆసుపత్రులు</div>
+<div class="card">🎓 విద్య</div>
+<div class="card">🏪 వ్యాపారాలు</div>
+<div class="card">📞 అత్యవసర నంబర్లు</div>
+</div>
+
+<footer>
+© 2026 Connect Bhadradri
+</footer>
+
 </body>
 </html>
