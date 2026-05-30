@@ -6,24 +6,90 @@
 <title>Connect Bhadradri</title>
 
 <style>
-body{
-font-family: Arial, sans-serif;
+*{
 margin:0;
-background:#f5f5f5;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
+body{
+background:#f5f7fa;
+}
+
+/* Splash Screen */
+#splash{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#0033cc,#00bfff);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+z-index:9999;
+}
+
+#splash img{
+width:180px;
+border-radius:50%;
+animation:zoom 2s ease-in-out;
+}
+
+@keyframes zoom{
+0%{transform:scale(0.3);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+#main-content{
+display:none;
+}
+
+/* Header */
 header{
 background:linear-gradient(135deg,#0066cc,#00bfff);
 color:white;
-padding:25px;
 text-align:center;
+padding:20px;
 box-shadow:0 3px 10px rgba(0,0,0,0.2);
 }
 
-.tagline{
-font-size:18px;
+header img{
+width:100px;
+border-radius:50%;
+margin-bottom:10px;
 }
 
+.tagline{
+font-size:15px;
+margin-top:5px;
+}
+
+/* Breaking News */
+.breaking{
+background:red;
+color:white;
+padding:10px;
+font-weight:bold;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.breaking span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 15s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* Search */
 .search{
 padding:15px;
 text-align:center;
@@ -32,13 +98,13 @@ text-align:center;
 .search input{
 width:90%;
 padding:14px;
-border-radius:30px;
 border:none;
+border-radius:30px;
 box-shadow:0 2px 8px rgba(0,0,0,0.2);
 font-size:16px;
 }
 
-
+/* Cards */
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -54,13 +120,18 @@ text-align:center;
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
 font-weight:bold;
 transition:0.3s;
-cursor:pointer;
 }
 
 .card:hover{
 transform:scale(1.05);
 }
 
+a{
+text-decoration:none;
+color:black;
+}
+
+/* Footer */
 footer{
 background:#222;
 color:white;
@@ -68,133 +139,90 @@ text-align:center;
 padding:15px;
 margin-top:20px;
 }
-#splash{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#0066cc;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-z-index:9999;
-color:white;
-}
 
-#main-content{
-display:none;
+/* WhatsApp */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:12px 16px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 </style>
 </head>
 
 <body>
 
+<!-- Splash Screen -->
 <div id="splash">
-<img src="file_00000000e010720999237aad9ea47f32.png" width="180">
+<img src="file_00000000e010720999237aad9ea47f32.png">
 <h1>Connect Bhadradri</h1>
 <p>మీ చేతిలో మీ జిల్లా</p>
+<p>Your District at Your Fingertips</p>
 </div>
 
+<!-- Main Content -->
 <div id="main-content">
 
 <header>
-<img src="file_00000000e010720999237aad9ea47f32.png" width="120">
-
+<img src="file_00000000e010720999237aad9ea47f32.png">
 <h1>Connect Bhadradri</h1>
-
 <p class="tagline">మీ చేతిలో మీ జిల్లా</p>
-
-<p class="tagline">
-Your District at Your Fingertips
-</p>
+<p class="tagline">Your District at Your Fingertips</p>
 </header>
 
-
-<div class="search">
-
-<h2>🔥 తాజా వార్తలు</h2>
-
-<ul>
-  <li>భద్రాచలంలో అభివృద్ధి పనులు ప్రారంభం</li>
-  <li>కొత్త ఉద్యోగాల నోటిఫికేషన్ విడుదల</li>
-  <li>జిల్లా స్థాయి క్రీడా పోటీలు నిర్వహణ</li>
-</ul>
-<input type="text" placeholder="సేవలు, వ్యాపారాలు, ఉద్యోగాలు వెతకండి...">
+<div class="breaking">
+<span>
+🔴 భద్రాచలంలో అభివృద్ధి పనులు ప్రారంభం | 🔴 కొత్త ఉద్యోగాల నోటిఫికేషన్ విడుదల | 🔴 జిల్లా స్థాయి క్రీడా పోటీలు నిర్వహణ
+</span>
 </div>
 
-  <h2>భద్రాద్రి జిల్లా డిజిటల్ డైరెక్టరీకి స్వాగతం</h2>
-<p>వార్తలు, ఉద్యోగాలు, ఆసుపత్రులు, విద్య, వ్యాపారాలు మరియు అత్యవసర సేవలు ఒకే చోట.</p>
-  
-<h2>🔥 తాజా వార్తలు</h2>
-<ul>
-<li>భద్రాచలంలో అభివృద్ధి పనులు ప్రారంభం</li>
-<li>కొత్తగూడెంలో కొత్త రహదారి పనులు</li>
-</ul>
+<div class="search">
+<input type="text" placeholder="సేవలు, ఉద్యోగాలు, ఆసుపత్రులు వెతకండి...">
+</div>
 
-<h2>💼 తాజా ఉద్యోగాలు</h2>
-<ul>
-<li>Data Entry Operator</li>
-<li>Hospital Staff Nurse</li>
-</ul>
-
-<h2>📢 ముఖ్య ప్రకటనలు</h2>
-<ul>
-<li>జిల్లా కార్యాలయం తాజా నోటీసు</li>
-</ul>
-  
 <div class="grid">
-<a href="news_.html">
-  <div class="card">📰 వార్తలు</div>
+
+<a href="news.html">
+<div class="card">📰<br>వార్తలు</div>
 </a>
+
 <a href="jobs.html">
-<div class="card">💼 ఉద్యోగాలు</div>
+<div class="card">💼<br>ఉద్యోగాలు</div>
 </a>
-<!DOCTYPE html>
-<html>
-<head>
-<title>ఆసుపత్రులు - Connect Bhadradri</title>
-<meta charset="UTF-8">
-</head>
-<body>
 
-<h1>🏥 భద్రాద్రి ఆసుపత్రులు</h1>
-
-<ul>
-<li>హాస్పిటల్ 1</li>
-<li>హాస్పిటల్ 2</li>
-<li>హాస్పిటల్ 3</li>
-</ul>
-
-<a href="index.html">🏠 హోమ్ పేజీ</a>
-<a href="https://wa.me/916305164535"
-style="position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:15px;border-radius:50%;
-text-decoration:none;font-size:25px;">
-🟢
+<a href="hospitals.html">
+<div class="card">🏥<br>ఆసుపత్రులు</div>
 </a>
-</body>
-</html>
+
 <a href="education.html">
-<div class="card">🎓 విద్య</div>
+<div class="card">🎓<br>విద్య</div>
 </a>
+
 <a href="business.html">
-<div class="card">🏢 వ్యాపారాలు</div>
+<div class="card">🏢<br>వ్యాపారాలు</div>
 </a>
+
 <a href="emergency.html">
-<div class="card">📞 అత్యవసర నంబర్లు</div>
+<div class="card">📞<br>అత్యవసర సేవలు</div>
 </a>
+
 </div>
 
 <footer>
 © 2026 Connect Bhadradri
 </footer>
-  
+
+<a class="whatsapp" href="https://wa.me/916305164535">🟢</a>
+
 </div>
-    
-  <script>
+
+<script>
 setTimeout(function(){
 document.getElementById("splash").style.display="none";
 document.getElementById("main-content").style.display="block";
